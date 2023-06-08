@@ -1,4 +1,4 @@
-import { createElement } from '../src/render.js';
+import { createElement } from '../render.js';
 
 const tripAdd = () => ` <form class="event event--edit" action="#" method="post">
 <header class="event__header">

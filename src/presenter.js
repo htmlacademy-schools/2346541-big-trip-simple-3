@@ -1,9 +1,9 @@
 import { render } from './render.js';
-import Board from '../view/board.js';
-import Sort from '../view/sort.js';
-import Events from '../view/tripEvent.js';
-import EventEdit from '../view/event_edit.js';
-import CreatTrip from '../view/trip_add.js';
+import Board from '../src/view/board.js';
+import Sort from '../src/view/sort.js';
+import Events from '../src/view/tripEvent.js';
+import EventEdit from '../src/view/event_edit.js';
+import CreatTrip from '../src/view/trip_add.js';
 export default class BoardPresenter{
   boardComponent = new Board();
   constructor({boardContainer}) {
