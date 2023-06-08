@@ -1,6 +1,5 @@
 import { getRandom } from '../utlis.js';
-import { description } from './consts.js';
-import { place } from './consts.js';
+import { description , place } from './consts.js';
 function randomPic(){
   return`http://picsum.photos/248/152?r=${getRandom(0,100)}`;
 }

@@ -107,4 +107,25 @@ const offersByType = [
     offers: [3,5]
   },
 ];
-export{tyeps,description,place,offers,offersByType};
+const times = [
+  {
+    timeFrom: '2019-03-19T11:20',
+    timeTo: '2019-03-19T13:00'
+  },
+  {
+    timeFrom: '2019-03-18T10:30',
+    timeTo: '2019-03-18T11:00'
+  },
+  {
+    timeFrom: '2019-03-18T12:25',
+    timeTo: '2019-03-18T13:35'
+  },
+  {
+    timeFrom: '2019-04-20T12:25',
+    timeTo: '2019-04-20T13:35'
+  }
+];
+function getOfferByType (){
+  return offersByType;
+}
+export{tyeps,description,place,offers,offersByType,times,getOfferByType};
