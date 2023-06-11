@@ -2,16 +2,17 @@ import { createElement } from '../render.js';
 
 const boardTemplate = () => '<section class="trip-events"></section>';
 export default class Board {
-  getTemplate () {
+  #element = null;
+  get template () {
     return boardTemplate;
   }
 
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
+  get element() {
+    if (!this.#element) {
+      this.#element = createElement(this.template);
     }
 
-    return this.element;
+    return this.#element;
   }
 
   removeElement() {
