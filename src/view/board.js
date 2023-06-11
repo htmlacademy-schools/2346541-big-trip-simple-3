@@ -1,4 +1,4 @@
-import { createElement } from '../src/render.js';
+import { createElement } from '../render.js';
 
 const boardTemplate = () => '<section class="trip-events"></section>';
 export default class Board {

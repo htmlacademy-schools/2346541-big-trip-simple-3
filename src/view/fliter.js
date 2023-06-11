@@ -1,4 +1,4 @@
-import {createElement} from '../src/render.js';
+import { createElement } from '../render.js';
 const getFliterTemplate = () => (
   `<form class="trip-filters" action="#" method="get">
   <div class="trip-filters__filter">
