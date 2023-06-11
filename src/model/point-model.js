@@ -1,17 +1,11 @@
-import { editPoint } from '../mosk/point';
-import { getRandom } from '../utlis';
-function randPoints (){
-  const pointModel = editPoint();
-  return pointModel[0,getRandom(0,5)];
-}
+import { getRandomPoint } from '../mosk/point';
 const POINT_COUNT = 3;
 
+
 export default class TripPointModel {
-  tripPoints = Array.from({length: POINT_COUNT},randPoints);
+  tripPoints = Array.from({length: POINT_COUNT}, getRandomPoint);
 
   getTripPoints() {
     return this.tripPoints;
   }
 }
-const testArray = Array.from({length: POINT_COUNT}, randPoints);
-export {testArray};

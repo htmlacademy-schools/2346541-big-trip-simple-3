@@ -1,30 +1,28 @@
-import { getRandom } from '../utlis.js';
-import { randomPla } from './destionction.js';
-import { offersByType ,times } from './consts.js';
-function randomPri(){
-  return getRandom(500,5000);
-}
-function randomOffersByType(){
-  return offersByType[getRandom(0,offersByType.length - 1)];
-}
-function randomTim(){
-  return times[getRandom(0,times.length - 1)];
-}
-function editPoint(){
-  const points = [];
-  for(let i = 1; i <= 6 ; i++){
-    const typesInEdit = randomOffersByType();
-    const timesInEdit = randomTim();
-    points.push({
-      id : i,
-      basePrice: randomPri(),
-      dateFrom: new Date(timesInEdit.timeFrom),
-      dateTo: new Date(timesInEdit.timeTo),
-      destination: randomPla(),
-      offers: typesInEdit.offers,
-      type: typesInEdit.type
-    });
+import { randomId , randomPrice ,randomArrayElement} from '../utlis';
+import { fromToDates, getArrayFromType, pointType } from './consts';
+import { getRandomDestination } from './distionction';
+const pointsId = [];
+
+
+const getRandomPoint = () => {
+  let id = randomId();
+  while (pointsId.indexOf(id) >= 0) {
+    id = randomId();
   }
-  return points;
-}
-export{editPoint};
+  pointsId.push(id);
+  const basePrice = randomPrice();
+  const dates = randomArrayElement(fromToDates);
+  const dateFrom = dates.dateFrom;
+  const dateTo = dates.dateTo;
+  const destination = getRandomDestination();
+  const type = randomArrayElement(pointType);
+  const offers = getArrayFromType(type);
+
+
+  return {
+    basePrice, dateFrom, dateTo, destination, id, offers, type
+  };
+};
+
+
+export {getRandomPoint};
