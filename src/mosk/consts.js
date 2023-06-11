@@ -1,85 +1,135 @@
 const pointType = ['taxi', 'bus', 'train', 'ship', 'drive', 'flight', 'check-in', 'sightseeing', 'restaurant'];
 
 
-const offers = [
-  {
-    id: 1,
-    title: 'Upgrade a business class',
-    price: 120
-  },
-  {
-    id: 2,
-    title: 'Add luggage',
-    price: 20
-  },
-  {
-    id: 3,
-    title: 'Switch to comfort',
-    price: 50
-  },
-  {
-    id: 4,
-    title: 'Add meal',
-    price: 90
-  },
-  {
-    id: 5,
-    title: 'Choose seats',
-    price: 35
-  },
-  {
-    id: 6,
-    title: 'Travel by train',
-    price: 190
-  },
-  {
-    id: 7,
-    title: 'Add alcohol',
-    price: 250
-  },
-  {
-    id: 8,
-    title: 'Upgrade a car',
-    price: 120
-  },
-  {
-    id: 9,
-    title: 'No queue',
-    price: 150
-  }
-];
+const taxiOffers = [{
+  id: 1,
+  title: 'Upgrade a business class',
+  price: 120
+}, {
+  id: 3,
+  title: 'Switch to comfort',
+  price: 50
+}];
 
+const busOffers = [{
+  id: 5,
+  title: 'Choose seats',
+  price: 35
+}, {
+  id: 6,
+  title: 'Travel by train',
+  price: 190
+}];
 
-const getOfferName = (offerId) => offers.find((offer) => offer.id === offerId).title;
-const getOfferPrice = (offerId) => offers.find((offer) => offer.id === offerId).price;
+const trainOffers = [{
+  id: 4,
+  title: 'Add meal',
+  price: 90
+}, {
+  id: 5,
+  title: 'Choose seats',
+  price: 35
+}, {
+  id: 7,
+  title: 'Add alcohol',
+  price: 250
+}];
 
+const shipOffers = [{
+  id: 4,
+  title: 'Add meal',
+  price: 90
+}, {
+  id: 5,
+  title: 'Choose seats',
+  price: 35
+}, {
+  id: 7,
+  title: 'Add alcohol',
+  price: 250
+}];
 
-const taxiOffers = [1, 3];
+const driveOffers = [{
+  id: 8,
+  title: 'Upgrade a car',
+  price: 120
+}];
 
+const flightOffers = [{
+  id: 2,
+  title: 'Add luggage',
+  price: 20
+},
+{
+  id: 4,
+  title: 'Add meal',
+  price: 90
+}, {
+  id: 5,
+  title: 'Choose seats',
+  price: 35
+}, {
+  id: 6,
+  title: 'Travel by train',
+  price: 190
+}, {
+  id: 7,
+  title: 'Add alcohol',
+  price: 250
+}];
 
-const busOffers = [5, 6];
-
-
-const trainOffers = [4, 5, 7];
-
-
-const shipOffers = [4, 5, 7];
-
-
-const driveOffers = [8];
-
-
-const flightOffers = [4, 5, 6, 7];
-
-
-const checkInOffers = [9];
-
+const checkInOffers = [{
+  id: 9,
+  title: 'No queue',
+  price: 150
+}];
 
 const sightseeingOffers = [];
 
+const restaurantOffers = [{
+  id: 5,
+  title: 'Choose seats',
+  price: 35
+}];
 
-const restaurantOffers = [5];
-
+const offersByType = [
+  {
+    type: 'taxi',
+    offers: taxiOffers
+  },
+  {
+    type: 'bus',
+    offers: busOffers
+  },
+  {
+    type: 'train',
+    offers: trainOffers
+  },
+  {
+    type: 'ship',
+    offers: shipOffers
+  },
+  {
+    type: 'drive',
+    offers: driveOffers
+  },
+  {
+    type: 'flight',
+    offers: flightOffers
+  },
+  {
+    type: 'check-in',
+    offers: checkInOffers
+  },
+  {
+    type: 'sightseeing',
+    offers: sightseeingOffers
+  },
+  {
+    type: 'restaurant',
+    offers: restaurantOffers
+  },
+];
 
 const getArrayFromType = (type) => {
   switch (type) {
@@ -162,4 +212,4 @@ const fromToDates = [
 ];
 
 
-export {pointType, offers, getArrayFromType, descriptionPhrases, namesOfPlaces, fromToDates, getOfferName, getOfferPrice};
+export {pointType, getArrayFromType, descriptionPhrases, namesOfPlaces, fromToDates,offersByType};

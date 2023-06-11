@@ -22,16 +22,17 @@ const sortList = () =>`<form class="trip-events__trip-sort  trip-sort" action="#
 </div>
 </form>`;
 export default class Sort {
-  getTemplate () {
+  #element = null;
+  get template () {
     return sortList;
   }
 
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
+  get element() {
+    if (!this.#element) {
+      this.#element = createElement(this.template);
     }
 
-    return this.element;
+    return this.#element;
   }
 
   removeElement() {
