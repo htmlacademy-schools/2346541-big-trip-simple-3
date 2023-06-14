@@ -4,3 +4,4 @@
 5.2ready
 6.1ready
 6.2ready
+7.1ready
